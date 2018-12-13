@@ -25,50 +25,52 @@ while (True):
         #2 Задание
         print("\n")
 
-        a = int(input())
-        b = int(input())
-        c = int(input())
+        a = int(input("Введите первый угол: "))
+        b = int(input("Введите второй угол: "))
+        c = int(input("Введите третий угол: "))
         if a==90:
-            print('a')
+            print('У треугольника есть прямой угол.')
         elif b==90:
-            print('b')
+            print('У треугольника есть прямой угол.')
         elif c==90:
-            print('c')
+            print('У треугольника есть прямой угол.')
+        else:
+            print("Прямоугольник не прямоугольный. Логично.")
 
     elif Zadanie == '3':
         #3 Задание
         print("\n")
 
-        x = int(input())
-        y = int(input())
+        x = int(input("Введите координату x: "))
+        y = int(input("Введите координату y: "))
         if x > 0 and y > 0:
-            print('1')
+            print('1 четверть')
         if x > 0 and y < 0:
-            print('4')
+            print('4 четверть')
         if x < 0 and y > 0:
-            print('2')
+            print('2 четверть')
         if x < 0 and y < 0:
-            print('3')
+            print('3 четверть')
 
     elif Zadanie == '4':
         #4 Задание
         print("\n")
 
-        a = int(input())
-        b = int(input())
-        c = int(input())
+        a = int(input("Введите первое число: "))
+        b = int(input("Введите второе число: "))
+        c = int(input("Введите третье число: "))
         if a < b < c:
-            print(b)
+            print("Среднее число: ",b)
         elif a < c < b:
-            print(c)
+            print("Среднее число: ",c)
         elif c < b < a:
-            print(b)
+            print("Среднее число: ",b)
         elif b < c < a:
-            print(c)
+            print("Среднее число: ",c)
         elif b < a < c:
-            print(a)
+            print("Среднее число: ",a)
         elif c < a < b:
-            print(a)
+            print("Среднее число: ",a)
 
     elif Zadanie == '5':
         #5 Задание
@@ -171,7 +173,7 @@ while (True):
                 n = n //10
             if n==0:
                 break
-        print("В числе", l, "самая большая цифра –", m, ".")
+        print("В числе {} самая большая цифра: {}" .format(l,m))
 
     elif Zadanie == '12':
         #12 Задание
