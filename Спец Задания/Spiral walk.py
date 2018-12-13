@@ -1,5 +1,15 @@
-# a = int(input("Строки матрицы: "))
-# b = int(input("Столбцы матрицы: "))
-c = [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15]]
-# c = [1,4,2,4]
-print(c)
+from random import random
+N = 5
+M = 6
+a = []
+n = 0
+for i in range(N):
+    z = []
+    for j in range(M):
+        n += 1
+        z.append(n)
+        print("%4d" % n, end='')
+    print()
+    a.append(z)
+print()
+ 
