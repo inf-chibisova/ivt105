@@ -3,8 +3,8 @@ from random import randint
 while (True):
     Zadanie = input("\nТекстовая помощь: help\nВведите команду или номер задания: ")
     if Zadanie == 'help':
-        print("_____________________________________\nhelp - Подсказки.\nexit - Выход из цыкла.\n0-8,10-12 - номера заданий. Вводить только одно число!\n")
-    elif Zadanie == 'exit':
+        print("_____________________________________\nhelp - Подсказки.\nexit/0 - Выход из цыкла.\n0-8,10-12 - номера заданий. Вводить только одно число!\n")
+    elif Zadanie == 'exit' or "0":
         break
 
     elif Zadanie == '1':     
