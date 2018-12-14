@@ -2,23 +2,24 @@ while (True):
     Zadanie = input("\nТекстовая помощь: help\nВведите команду или номер задания: ")
     if Zadanie == 'help':
         print("_____________________________________\nhelp - Подсказки.\nexit/0 - Выход из цыкла.\n0-10 - номера заданий. Вводить только одно число!\n")
-    elif Zadanie == 'exit' or "0":
+    elif Zadanie == 'exit' or Zadanie == "0":
         break
 
     elif Zadanie == '1':     
         #1 Задание
+        print("\n")
 
-        a = input("Введите фамилию:")
-        b = input("Введите имя:")
-        c = input("Введите отчество:")
-        print(a, b[0],".", c[0],".")
+        a = input("Введите фамилию: ")
+        b = input("Введите имя: ")
+        c = input("Введите отчество: ")
+        print(a, b[0]+".", c[0]+".")
 
 
-    elif Zadanie =='2':
+    elif Zadanie == '2':
         #2 Задание
         print("\n")
 
-        print ( "Введите имя, отчество и фамилию:" ) 
+        print ( "Введите имя, отчество и фамилию: " ) 
         s = input() 
         n = s.find ( " " ) 
         name = s[:n] 
@@ -26,7 +27,7 @@ while (True):
         n = s.find ( " " ) 
         name2 = s[:n] 
         s = s[n+1:]
-        s = name + "" + name2[0] + "." + s[0] + "." 
+        s = name + " " + name2[0] + "." + s[0] + "." 
         print ( s ) 
 
 
@@ -95,19 +96,50 @@ while (True):
         #8 Задание
         print("\n")
 
+        Text = input("Введите сообщение: ")
 
+        print("Столько слов начинаются с большой буквы: ", sum(1 for c in Text if c.isupper()))
 
     elif Zadanie == '9':
         #9 Задание
         print("\n")
 
-
+        s = (list(input("Введите предложение: ")))
+        l = len(s)
+        Word_hight = 0
+        Word_id = 0
+        count = 0
+        i = 0
+        while i < l:
+            if s[i] != ' ':
+                count += 1
+            else:
+                if count > Word_hight:
+                    Word_hight = count
+                    id_w = i - count
+                count = 0
+            i += 1
+        
+        if count > Word_hight:
+            Word_hight = count
+            id_w = i - count
+        
+        Word_id_end = Word_id + Word_hight
+        while Word_id < Word_id_end:
+            if s[Word_id] == 'A':
+                s[Word_id] = 'B'
+            Word_id += 1
+        
+        s1 = ''
+        for i in s:
+            s1 += i	
+        print(s1)
 
     elif Zadanie == '10':
         #10 Задание
         print("\n")
 
-        s = input("Введите текст")
+        s = input("Введите текст: ")
 
         n = len(s.split())-1
         s = s.replace('\n', '')
