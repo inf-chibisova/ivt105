@@ -116,18 +116,18 @@ while (True):
             else:
                 if count > Word_hight:
                     Word_hight = count
-                    id_w = i - count
+                    Word_id = i - count
                 count = 0
             i += 1
         
         if count > Word_hight:
             Word_hight = count
-            id_w = i - count
+            Word_id = i - count
         
         Word_id_end = Word_id + Word_hight
         while Word_id < Word_id_end:
-            if s[Word_id] == 'A':
-                s[Word_id] = 'B'
+            if s[Word_id] == 'а':
+                s[Word_id] = 'б'
             Word_id += 1
         
         s1 = ''
@@ -142,8 +142,8 @@ while (True):
         s = input("Введите текст: ")
 
         n = len(s.split())-1
-        s = s.replace('\n', '')
-        s = s.replace('\r', '')
+        s = s.replace('\n', ' ')
+        s = s.replace('\r', ' ')
         n1 = len(s)
         s = s.replace(' ', '')
         n2 = len(s)
